@@ -1,12 +1,17 @@
 import React, { Component } from 'react'
-import { Text, StyleSheet, View } from 'react-native'
-
-const Video =()=> {
-  
+import { Text, StyleSheet, View} from 'react-native'
+import { ScrollView } from 'react-native-virtualized-view';
+import Videogiaitri from '../component/Videogiaitri'
+import Videothoisu from '../component/Videothoisu'
+import VideoYTB from '../component/VideoYTB'
+const Video =()=> { 
     return (
-      <View>
-        <Text> textInComponent </Text>
-      </View>
+      <ScrollView>
+         <VideoYTB></VideoYTB>
+         <Videothoisu></Videothoisu>
+         <Videogiaitri></Videogiaitri>
+      </ScrollView>
+       
     )
   
 }

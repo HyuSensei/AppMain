@@ -1,10 +1,10 @@
 import { Text, View, ActivityIndicator,FlatList,TouchableOpacity, Image,StyleSheet } from 'react-native'
 import React, {useState, useEffect} from 'react'
-
-const Tinmoi=({navigation})=>{
+import { useNavigation } from '@react-navigation/native'
+const Tinmoi=()=>{
   const [data, setdata] = useState([]);
   const [isLoading, setisLoading] = useState(true);
-
+  const navigation = useNavigation();
   useEffect(() => {
     getList();
    return () => {
@@ -12,7 +12,7 @@ const Tinmoi=({navigation})=>{
    }
   }, []);
   const getList=()=>{
-    return fetch('http://192.168.0.105/api_newspaper-main/api/baibao/Tinmoi.php')
+    return fetch('https://phantienhuy.000webhostapp.com/api_newspaper-main/api/baibao/Tinmoi.php')
     .then((response) => response.json())
       .then((responseJson) => {
         setdata(responseJson);
@@ -23,7 +23,12 @@ const Tinmoi=({navigation})=>{
   }
   const renderItem = ({item, index}) => (
     <TouchableOpacity 
-    onPress={()=>navigation.navigate('TinMoi')}
+    onPress={()=>    
+      {   
+          navigation.navigate('Detail', { item })
+          console.log(item.id)
+      }  
+  }
     >
         <View style={styles.bai_bao}>
             <Image 

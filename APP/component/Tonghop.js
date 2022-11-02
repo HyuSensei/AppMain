@@ -1,10 +1,10 @@
 import { Text, View, ActivityIndicator,FlatList,TouchableOpacity, Image,StyleSheet } from 'react-native'
 import React, {useState, useEffect} from 'react'
-
+import { useNavigation } from '@react-navigation/native'
 const Tonghop=()=>{
   const [data, setdata] = useState([]);
   const [isLoading, setisLoading] = useState(true);
-
+  const navigation = useNavigation();
   useEffect(() => {
     getList();
    return () => {
@@ -12,7 +12,7 @@ const Tonghop=()=>{
    }
   }, []);
   const getList=()=>{
-    return fetch('http://192.168.0.105/api_newspaper-main/api/baibao/Tonghop.php')
+    return fetch('https://phantienhuy.000webhostapp.com/api_newspaper-main/api/baibao/Tonghop.php')
     .then((response) => response.json())
       .then((responseJson) => {
         setdata(responseJson);
@@ -22,7 +22,14 @@ const Tonghop=()=>{
     }).finally(()=>{setisLoading(false)})
   }
   const renderItem = ({item, index}) => (
-    <TouchableOpacity>
+    <TouchableOpacity 
+    onPress={()=>
+      {     
+          navigation.navigate('Detail', { item })
+          console.log(item.id)
+      } 
+  }
+    >
         <View style={styles.bai_bao}>
             <Image 
             source={{uri:item.anh}} 

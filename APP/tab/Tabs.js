@@ -35,12 +35,12 @@ const Tabs=() => {
                                 style={{
                                     width: 25,
                                     height: 25,
-                                    tintColor: focused ? '#5295FA': 'gray'
+                                    tintColor: focused ? '#0d9148': 'gray'
                                 }}
                             />
                             <Text
                                 style={{
-                                    color: focused ? '#5295FA': 'gray',
+                                    color: focused ? '#0d9148': 'gray',
                                     fontSize: 12
                                 }}
                             >Tin Tức</Text>
@@ -57,12 +57,12 @@ const Tabs=() => {
                                 style={{
                                     width: 25,
                                     height: 25,
-                                    tintColor: focused ? '#5295FA': 'gray'
+                                    tintColor: focused ? '#0d9148': 'gray'
                                 }}
                             />
                             <Text
                                 style={{
-                                    color: focused ? '#5295FA': 'gray',
+                                    color: focused ? '#0d9148': 'gray',
                                     fontSize: 12
                                 }}
                             >Theo Dõi</Text>
@@ -80,12 +80,12 @@ const Tabs=() => {
                                 style={{
                                     width: 26,
                                     height: 26,
-                                    tintColor: focused ? '#5295FA': 'gray'
+                                    tintColor: focused ? '#0d9148': 'gray'
                                 }}
                             />
                             <Text
                                 style={{
-                                    color: focused ? '#5295FA': 'gray',
+                                    color: focused ? '#0d9148': 'gray',
                                     fontSize: 12
                                 }}
                             >Video</Text>
@@ -102,12 +102,12 @@ const Tabs=() => {
                                 style={{
                                     width: 26,
                                     height: 26,
-                                    tintColor: focused ? '#5295FA': 'gray'
+                                    tintColor: focused ? '#0d9148': 'gray'
                                 }}
                             />
                             <Text
                                 style={{
-                                    color: focused ? '#5295FA': 'gray',
+                                    color: focused ? '#0d9148': 'gray',
                                     fontSize: 12
                                 }}
                             >Cài Đặt</Text>

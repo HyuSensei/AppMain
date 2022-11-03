@@ -7,12 +7,17 @@ const Detail =(props) => {
     console.log(props.route.params.item.anh)
     return (
         <ScrollView style={styles.container}>
-        <View style={{ left: -10, flexDirection: 'row', alignItems: 'center' }}>
+        <View style={{ left: -10, flexDirection: 'row', alignItems: 'center',height:50 }}>
                 <TouchableOpacity
                     onPress={() => navigation.navigate('Tabs')}
                 >
-                    <Image source={require('../img/backicon.png')} style={{ width: 35, height: 35, top: 1 }} />
+                    <Image source={require('../img/backicon2.png')} style={{ width: 30, height: 30, top: 1,marginLeft:12 }} />
                 </TouchableOpacity>
+                <Image 
+                    source={{uri:props.route.params.item.logo}} 
+                    style={{width:100,height:30,marginLeft:90,resizeMode: 'contain'}}
+                    
+                />
         </View>
         <View style={{marginTop:20}}>
             <Text style={styles.text_tieu_de}>{props.route.params.item.tieu_de}</Text>

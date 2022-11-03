@@ -11,7 +11,7 @@ const HomeScreen =()=>{
             <View style={{justifyContent:'center',alignItems:'center',marginBottom:10}}>
             <StatusBar
             animated={true}
-            backgroundColor="#61dafb"
+            backgroundColor="#015f71"
              />
             <Image
                     style={{height:50,width:120, marginTop:30}}

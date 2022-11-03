@@ -17,6 +17,9 @@ const Setting = () => {
     flex: 1,
     backgroundColor: 'white',
   }}>
+    <View style={{width:'100%',height:60,backgroundColor:'#015f71',justifyContent:'center'}}>
+          <Text style={{color:'#fff',fontSize:20,fontWeight:'bold',textAlign:'center'}}>Cài đặt</Text>
+        </View>
     <ScrollView>
       <View style={{
         height: 40,
@@ -293,7 +296,7 @@ const Setting = () => {
           size={20} color={'black'}
         />
       </View>
-      <View style={{width:'100%',marginTop:50}}>
+      <View style={{width:'100%',marginTop:40}}>
         <Button title='ĐĂNG XUẤT'
           onPress={() => { logout() }}
          />

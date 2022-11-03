@@ -3,7 +3,6 @@ import HomeScreen from '../screnns/HomeScreen';
 import Follow from '../screnns/Follow';
 import Setting from '../screnns/Setting';
 import Video from '../screnns/Video';
-import Discover from '../screnns/Discover'
 import { NavigationContainer } from '@react-navigation/native';
 import { Text, StyleSheet, View , Image} from 'react-native'
 const Tab = createBottomTabNavigator();
@@ -35,14 +34,14 @@ const Tabs=() => {
                                 resizeMode='contain'
                                 style={{
                                     width: 25,
-                                    height: 24,
+                                    height: 25,
                                     tintColor: focused ? '#5295FA': 'gray'
                                 }}
                             />
                             <Text
                                 style={{
                                     color: focused ? '#5295FA': 'gray',
-                                    fontSize: 11
+                                    fontSize: 12
                                 }}
                             >Tin Tức</Text>
                         </View>
@@ -57,14 +56,14 @@ const Tabs=() => {
                                 resizeMode='contain'
                                 style={{
                                     width: 25,
-                                    height: 24,
+                                    height: 25,
                                     tintColor: focused ? '#5295FA': 'gray'
                                 }}
                             />
                             <Text
                                 style={{
                                     color: focused ? '#5295FA': 'gray',
-                                    fontSize: 11
+                                    fontSize: 12
                                 }}
                             >Theo Dõi</Text>
                         </View>
@@ -79,39 +78,17 @@ const Tabs=() => {
                             <Image source={require('../img/videoicon.png')}
                                 resizeMode='contain'
                                 style={{
-                                    width: 25,
-                                    height: 25,
+                                    width: 26,
+                                    height: 26,
                                     tintColor: focused ? '#5295FA': 'gray'
                                 }}
                             />
                             <Text
                                 style={{
                                     color: focused ? '#5295FA': 'gray',
-                                    fontSize: 11
+                                    fontSize: 12
                                 }}
                             >Video</Text>
-                        </View>
-                    ),
-                }}
-            />
-            <Tab.Screen name="Discover" component={Discover} 
-                options={{
-                    tabBarIcon: ({focused}) =>(
-                        <View style={{alignItems: 'center', justifyContent: 'center', top: 5}}>
-                            <Image source={require('../img/khampha.png')}
-                                resizeMode='contain'
-                                style={{
-                                    width: 25,
-                                    height: 25,
-                                    tintColor: focused ? '#5295FA': 'gray'
-                                }}
-                            />
-                            <Text
-                                style={{
-                                    color: focused ? '#5295FA': 'gray',
-                                    fontSize: 11
-                                }}
-                            >Khám Phá</Text>
                         </View>
                     ),
                 }}
@@ -123,15 +100,15 @@ const Tabs=() => {
                             <Image source={require('../img/Settingicon.png')}
                                 resizeMode='contain'
                                 style={{
-                                    width: 25,
-                                    height: 25,
+                                    width: 26,
+                                    height: 26,
                                     tintColor: focused ? '#5295FA': 'gray'
                                 }}
                             />
                             <Text
                                 style={{
                                     color: focused ? '#5295FA': 'gray',
-                                    fontSize: 11
+                                    fontSize: 12
                                 }}
                             >Cài Đặt</Text>
                         </View>

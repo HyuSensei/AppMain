@@ -86,7 +86,7 @@ export const AuthProvider = ({ children }) => {
          if(userInfo){
             Alert.alert(
                 "Thông báo",
-                "Xin Đăng Ký thành công, xin hãy đăng nhập lại",
+                "Đăng ký thành công, yêu cầu đăng nhập",
                 [
                   {
                     text: "Đã hiểu",

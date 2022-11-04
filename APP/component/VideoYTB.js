@@ -57,7 +57,7 @@ const VideoYTB = () => {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        marginTop: 50
+        marginTop: 30
     },
     contentContainer: {
         flex: 0.65,

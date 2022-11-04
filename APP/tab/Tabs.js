@@ -3,6 +3,7 @@ import HomeScreen from '../screnns/HomeScreen';
 import Follow from '../screnns/Follow';
 import Setting from '../screnns/Setting';
 import Video from '../screnns/Video';
+import Trend from '../screnns/Trend';
 import { NavigationContainer } from '@react-navigation/native';
 import { Text, StyleSheet, View , Image} from 'react-native'
 const Tab = createBottomTabNavigator();
@@ -13,17 +14,17 @@ const Tabs=() => {
             screenOptions={{
                 headerShown: false,
                 tabBarShowLabel: false,
-                // tabBarStyle: {
-                //     position: 'absolute',
-                //     bottom: 25,
-                //     left: 20,
-                //     right: 20,
-                //     elevation: 0,
-                //     backgroundColor: '#fff',
-                //     borderRadius: 15,
-                //     height: 90,
-                //     ...styles.shadow,
-                // }
+                tabBarStyle: {
+                    //position: 'absolute',
+                    //bottom: 25,
+                    //left: 20,
+                    //right: 20,
+                    //elevation: 0,
+                    //backgroundColor: '#fff',
+                    //borderRadius: 15,
+                    height: 65,
+                    ...styles.shadow,
+                }
             }}
         >
             <Tab.Screen name="Home" component={HomeScreen} 
@@ -89,6 +90,28 @@ const Tabs=() => {
                                     fontSize: 12
                                 }}
                             >Video</Text>
+                        </View>
+                    ),
+                }}
+            />
+            <Tab.Screen name="Trend" component={Trend} 
+                options={{
+                    tabBarIcon: ({focused}) =>(
+                        <View style={{alignItems: 'center', justifyContent: 'center', top: 5}}>
+                            <Image source={require('../img/xuhuongicon.png')}
+                                resizeMode='contain'
+                                style={{
+                                    width: 26,
+                                    height: 26,
+                                    tintColor: focused ? '#0d9148': 'gray'
+                                }}
+                            />
+                            <Text
+                                style={{
+                                    color: focused ? '#0d9148': 'gray',
+                                    fontSize: 12
+                                }}
+                            >Xu Hướng</Text>
                         </View>
                     ),
                 }}

@@ -1,6 +1,7 @@
 import YoutubePlayer from "react-native-youtube-iframe";
 import { Text, View, ActivityIndicator, FlatList, TouchableOpacity, Image, StyleSheet, SafeAreaView } from 'react-native'
 import React, { useState, useEffect } from 'react'
+
 const Videogiaitri = () => {
     const [data, setdata] = useState([]);
     const [isLoading, setisLoading] = useState(true);
@@ -12,7 +13,7 @@ const Videogiaitri = () => {
         }
     }, []);
     const getList = () => {
-        return fetch('https://phantienhuy.000webhostapp.com/api_newspaper-main/api/baibao/Videogiaitri.php')
+        return fetch('http://192.168.0.106/api_newspaper-main/api/baibao/Videogiaitri.php')
             .then((response) => response.json())
             .then((responseJson) => {
                 setdata(responseJson);

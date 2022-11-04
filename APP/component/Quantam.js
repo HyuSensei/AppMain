@@ -12,7 +12,7 @@ const Quantam=()=>{
    }
   }, []);
   const getList=()=>{
-    return fetch('https://phantienhuy.000webhostapp.com/api_newspaper-main/api/baibao/Quantam.php')
+    return fetch('http://192.168.0.106/api_newspaper-main/api/baibao/Quantam.php')
     .then((response) => response.json())
       .then((responseJson) => {
         setdata(responseJson);
@@ -33,6 +33,7 @@ const Quantam=()=>{
         <View style={styles.bai_bao}>
             <Image 
             source={{uri:item.anh}} 
+            resizeMode="contain"
             style={styles.img}/>
             <View style={styles.contentContainer}>
                 <Text style={styles.text_tieu_de}>{item.tieu_de}</Text>
@@ -42,7 +43,6 @@ const Quantam=()=>{
             source={{uri:item.logo}} 
             resizeMode="contain"
             style={styles.imglogo}/>
-            
         </View>
     </TouchableOpacity>
   )
@@ -53,6 +53,7 @@ const Quantam=()=>{
           data={data}
           renderItem={renderItem}
           //horizontal
+          listKey={item =>`key-${item.id}`}
           keyExtractor={item =>`key-${item.id}`}
         />
         )}
@@ -65,18 +66,18 @@ const styles = StyleSheet.create({
     },
     bai_bao:{
         width:'100%',
-        marginRight:10,
-        marginTop:20,
+        marginTop:10,
+        padding:20
     },
     contentContainer:{
         fontWeight:'bold',
         fontSize:17,
         flex: 0.65,
-        paddingHorizontal: 5,
     },
     text_tieu_de:{
         fontWeight:'bold',
         fontSize:16,
+        textAlign:'justify'
     },
     img:{
         flex: 0.35,
@@ -86,8 +87,7 @@ const styles = StyleSheet.create({
     },
     imglogo:{
         width:55,
-        height:25,
-        marginLeft:4
+        height:25
     }
 })
 export default Quantam;

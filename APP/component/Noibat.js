@@ -12,7 +12,7 @@ const Noibat=()=>{
    }
   }, []);
   const getList=()=>{
-    return fetch('https://phantienhuy.000webhostapp.com/api_newspaper-main/api/baibao/Noibat.php')
+    return fetch('http://192.168.0.106/api_newspaper-main/api/baibao/Noibat.php')
     .then((response) => response.json())
       .then((responseJson) => {
         setdata(responseJson);

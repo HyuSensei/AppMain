@@ -1,16 +1,14 @@
-import React, { Component,useState } from 'react'
+import React, { Component } from 'react'
 import { Text, TextInput, View, StyleSheet,Image } from 'react-native'
-
-const SearchBar =()=>{
-    const [search, setsearch] = useState('');
-    return(
+import { useNavigation } from '@react-navigation/native';
+const SearchBar = () => {
+    const navigation = useNavigation();
+    return (
         <View style={styles.container}>
             <TextInput style={styles.searchInput} placeholder='Nhập Thông Tin...'
-            onChangeText={(text)=>{
-                setsearch(text);
-              }}
+                onPressIn={() => navigation.navigate('Search')}
             />
-            <Image
+             <Image
                     style={{height:30,width:30,margin:5}}
                     source={require('../img/timkiem.png')}
                 />
@@ -32,9 +30,6 @@ const styles = StyleSheet.create({
     searchInput:{
         paddingLeft: 8,
         fontSize: 14,
-        // borderWidth: 2,
-        // borderRadius: 10,
     }
 })
 export default SearchBar;
-

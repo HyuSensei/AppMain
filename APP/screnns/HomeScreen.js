@@ -1,16 +1,14 @@
-import React, { Component,useState } from 'react'
-import { View, StatusBar, Image, StyleSheet,TextInput } from 'react-native'
+import React, { Component } from 'react'
+import { View, StatusBar, Image } from 'react-native'
 import SearchBar from '../component/SearchBar';
 import Tinmoi from '../component/Tinmoi';
 import Tonghop from '../component/Tonghop';
 import Noibat from '../component/Noibat';
 import { ScrollView } from 'react-native-virtualized-view';
-import Combo from '../component/Combo';
 const HomeScreen = () => {
     return (
         <ScrollView style={{ backgroundColor: '#fff', paddingHorizontal: 15, flex: 1 }}>
-
-            <View style={{ justifyContent: 'center', alignItems: 'center', marginBottom: 10}}>
+            <View style={{ justifyContent: 'center', alignItems: 'center', marginBottom: 10 }}>
                 <StatusBar
                     animated={true}
                     backgroundColor="#015f71"
@@ -20,8 +18,12 @@ const HomeScreen = () => {
                     source={require('../img/logoo.png')}
                 />
             </View>
-            <Combo></Combo>
+            <SearchBar />
+            <Tinmoi></Tinmoi>
+            <Tonghop></Tonghop>
+            <Noibat></Noibat>
         </ScrollView>
     )
 }
+
 export default HomeScreen;

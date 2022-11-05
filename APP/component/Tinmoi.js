@@ -1,11 +1,13 @@
-import { Text, View, ActivityIndicator, FlatList, TouchableOpacity, Image, StyleSheet } from 'react-native'
+import { Text, View, ActivityIndicator, FlatList, TouchableOpacity, Image, StyleSheet, TextInput } from 'react-native'
 import React, { useState, useEffect } from 'react'
 import { useNavigation } from '@react-navigation/native'
 
 const Tinmoi = () => {
+  const [search, setsearch] = useState('');
   const [data, setdata] = useState([]);
   const [isLoading, setisLoading] = useState(true);
   const navigation = useNavigation();
+  
   useEffect(() => {
     getList();
     return () => {
@@ -51,7 +53,7 @@ const Tinmoi = () => {
       <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#f47c59' }}>TIN MỚI</Text>
       {isLoading ? <ActivityIndicator /> : (
         <FlatList
-          data={data}
+          data={data.filter(eachBao=>eachBao.tieu_de.toLocaleLowerCase().includes(search.toLocaleLowerCase()))}
           renderItem={renderItem}
           horizontal
           keyExtractor={item => `key-${item.id}`}

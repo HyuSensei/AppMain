@@ -1,10 +1,15 @@
-import React, { Component } from 'react'
+import React, { Component,useState } from 'react'
 import { Text, TextInput, View, StyleSheet,Image } from 'react-native'
 
 const SearchBar =()=>{
+    const [search, setsearch] = useState('');
     return(
         <View style={styles.container}>
-            <TextInput style={styles.searchInput} placeholder='Nhập Thông Tin...'/>
+            <TextInput style={styles.searchInput} placeholder='Nhập Thông Tin...'
+            onChangeText={(text)=>{
+                setsearch(text);
+              }}
+            />
             <Image
                     style={{height:30,width:30,margin:5}}
                     source={require('../img/timkiem.png')}

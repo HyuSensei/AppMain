@@ -35,7 +35,6 @@ const VideoYTB = () => {
                     fontWeight: '600',
                     fontSize: 15,
                     textAlign:'justify',
-
                 }}  numberOfLines={2}>{item.title}</Text>
             </View>
 

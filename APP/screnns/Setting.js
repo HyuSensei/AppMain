@@ -48,7 +48,7 @@ const Setting = () => {
           fontSize: 14,
           color: 'black',
           paddingStart: 10,
-        }}>Language</Text>
+        }}>Ngôn ngữ</Text>
         <View style={{ flex: 1 }} />
         <Text style={{
           color: 'black',
@@ -56,7 +56,7 @@ const Setting = () => {
           color: 'black',
           paddingEnd: 10,
           opacity: 0.5,
-        }}>English</Text>
+        }}>Tiếng Việt</Text>
         <Icon
           name='chevron-right'
           style={{
@@ -81,7 +81,7 @@ const Setting = () => {
           fontSize: 14,
           color: 'black',
           paddingStart: 10,
-        }}>Environment</Text>
+        }}>Môi trường</Text>
         <View style={{ flex: 1 }} />
         <Text style={{
           color: 'black',
@@ -126,7 +126,7 @@ const Setting = () => {
           fontSize: 14,
           color: 'black',
           paddingStart: 10,
-        }}>Phone number</Text>
+        }}>Số điện thoại</Text>
         <View style={{ flex: 1 }} />
         <Icon
           name='chevron-right'
@@ -190,7 +190,7 @@ const Setting = () => {
           fontSize: 14,
           color: 'black',
           paddingStart: 10,
-        }}>Lock app in background</Text>
+        }}>Khóa ứng dụng nền</Text>
         <View style={{ flex: 1 }} />
         
       </View>
@@ -209,7 +209,7 @@ const Setting = () => {
           fontSize: 14,
           color: 'black',
           paddingStart: 10,
-        }}>Use fingerprint</Text>
+        }}>Sử dụng dấu vân tay</Text>
         <View style={{ flex: 1 }} />
        
       </View>
@@ -228,7 +228,7 @@ const Setting = () => {
           fontSize: 14,
           color: 'black',
           paddingStart: 10,
-        }}>Change password</Text>
+        }}>Thay đổi mật khẩu</Text>
         <View style={{ flex: 1 }} />
         
       </View>
@@ -259,7 +259,7 @@ const Setting = () => {
           fontSize: 14,
           color: 'black',
           paddingStart: 10,
-        }}>Term of Service</Text>
+        }}>Hạn của dịch vụ</Text>
         <View style={{ flex: 1 }} />
         <Icon
           name='chevron-right'
@@ -285,7 +285,7 @@ const Setting = () => {
           fontSize: 14,
           color: 'black',
           paddingStart: 10,
-        }}>Open source licenses</Text>
+        }}>Giấy phép nguồn mở</Text>
         <View style={{ flex: 1 }} />
         <Icon
           name='chevron-right'
